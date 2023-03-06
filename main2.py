@@ -395,7 +395,7 @@ if __name__ == '__main__':
     for i in ts:
         i.join()
 
-    
+
     # # 邮箱通知
     # function_tools.send_mail(
     #     sender='📧发送者',

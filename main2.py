@@ -12,13 +12,8 @@ import pandas as pd
 from threading import Thread
 from time import time
 from time import sleep
-import smtplib
 import base64
 import bs4
-
-# 内建模块 邮件
-import function_tools
-import datetime
 
 # configs
 # 日志开关

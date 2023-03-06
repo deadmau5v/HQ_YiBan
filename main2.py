@@ -215,7 +215,7 @@ def cas_datas_in_html(student: Student) -> (dict, dict):
         cas_datas[i['name']] = i['value']
 
     # 理论返回 lt 和 execution
-    if 'execution' in cas_datas.keys() and 'lt' in cas_datas.keys():
+    if 'execution' in cas_datas and 'lt' in cas_datas:
         LOG('1、获取 execution lt 成功')
     else:
         LOG('1、获取 execution lt 失败')

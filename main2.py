@@ -177,7 +177,7 @@ def xggl_headers(referer: str):
 
 def str2data(text: str):
     """字符串转data"""
-    data = dict()
+    data = {}
     text.strip()
     text = text.replace('\t', '').split('\n')
     for i in text:
@@ -208,7 +208,7 @@ def cas_datas_in_html(student: Student) -> (dict, dict):
     # 解析html内cookies
     soup = bs4.BeautifulSoup(r.text, 'html.parser').find_all(
         name='input', attrs={'type': 'hidden'})
-    cas_datas = dict()
+    cas_datas = {}
 
     # 提取cookies
     for i in soup:

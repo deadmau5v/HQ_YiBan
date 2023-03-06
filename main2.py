@@ -354,12 +354,10 @@ def dk(data, cookie, student):
         if r.json()['result']:
             student.msg = '打卡成功'
             return True
-        else:
-            student.msg = r.json()['errorInfoList'][0]['message']
-            if '重复' in r.json()['errorInfoList'][0]['message']:
-                return True
-            else:
-                return False
+        student.msg = r.json()['errorInfoList'][0]['message']
+        if '重复' in r.json()['errorInfoList'][0]['message']:
+            return True
+        return False
     except:
         student.msg = '打卡失败'
         return False
